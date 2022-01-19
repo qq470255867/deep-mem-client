@@ -1,0 +1,58 @@
+<!--pages/edit/edit.wxml-->
+<view class="contain">
+    <view class='edit-header'>
+        <text bindtap=''></text>
+        <text class='header-delive' bindtap='post'>发表</text>
+    </view>
+    <view class='edit-main'>
+        <textarea class='edit-text' placeholder='这是个好时候....' placeholder-style='color:#888' bindinput="getInputValue"
+            value="{{content}}"></textarea>
+        <!-- 图片开始 -->
+        <view class='edit-img'>
+            <!-- <view wx:for="{{images}}" wx:key="index" bindtap="ViewImage" data-url="{{images[index]}}">
+                <image src='{{item}}' mode='aspectFill' />
+            </view> -->
+            <image hidden="{{!isupload}}" src='{{imgtmp}}' mode='aspectFill' />
+            <view  hidden="{{imgtmp}}" class='iconfont icon-add' catchtap='chooseImage'></view>
+        </view>
+    </view>
+    <view class='edit-footer'>
+        <view class='footer-row' bindtap='chooseLocation'>
+            <text class='iconfont icon-didian1'></text>
+            <text>{{location==null?'记忆在':location}}</text>
+            <text class='iconfont icon-xiangyou1'></text>
+        </view>
+        <view class="section">
+            <view class='footer-row'>
+                <text class='iconfont icon-rili'></text>
+                <text>记忆时</text>
+                <picker style="text-align: left;" mode="date" value="{{date}}" start="2015-09-01" end="2025-09-01"
+                    bindchange="bindDateChange">
+                    <view class="picker">
+                        <text style="text-align: left;">{{date}}</text>
+                    </view>
+                </picker>
+            </view>
+        </view>
+
+        <view class="section">
+            <view class='footer-row'>
+                <text class='iconfont icon-a-ziyuan15'></text>
+                <text>Depth</text>
+                <picker style="text-align: left;" mode="selector" value="{{depth}}" range="{{depths}}"
+                    bindchange="bindDepthChange">
+                    <view class="picker">
+                        <text style="text-align: left;"> {{depths[depth]}} m </text>
+                    </view>
+                </picker>
+                <!-- <picker-view style="width: 100%; height: 100%;" value="{{depth}}" bindchange="bindPickerChange">
+                    <picker-view-column>
+                        <view class="picker" wx:for="{{depths}}"  style="line-height: 50px">
+                            <text style="text-align: left;">  {{item}}  </text>
+                        </view>
+                    </picker-view-column>
+                </picker-view> -->
+            </view>
+        </view>
+    </view>
+</view>

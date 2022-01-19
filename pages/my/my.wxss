@@ -1,0 +1,225 @@
+/* pages/my/my.wxss */
+@import '../../lib/iconfont/iconfont.wxss';
+.container{
+    padding: 0;
+    position: relative;
+    height: 45vh;
+    background-color: rgb(244, 244, 245);
+  }
+page {
+    height: 100%;
+  
+  }
+.avatar_num_edit .name_lv {
+    display: flex;
+    width: 100%;
+}
+
+.avatar_num_edit .name_lv .name{
+    padding-left: 5%;
+    font-size: 80%;
+    text-align: left;
+    width: 80%;
+}
+
+.avatar_num_edit .name_lv .lv{
+    text-align: center;
+    width: 20%;
+}
+
+
+.avatar_num_edit .name_lv .lv .iconfont {
+    font-size: 25px;
+}
+.avatar_num_edit .exp {
+    padding-top: 5%;
+    width: 100%;
+    font-size: 50%;
+    color: gray;
+}
+.avatar_num_edit .exp .pro{
+    width: 100%;
+}
+
+
+
+.header {
+    width: 100%;
+    height: 100px;
+    margin: auto 0;
+    border-radius: 10px;
+}
+
+.avatar_num_edit {
+    margin: auto 0;
+    width: 100%;
+    display: flex;
+}
+
+.avatar_num_edit .avatar {
+    width: 100%;
+    flex: 3;
+
+}
+
+.avatar_num_edit .avatar image {
+    margin: 0 auto;
+    border-radius: 100%;
+    display: block;
+    width: 70%;
+    float: center;
+}
+
+.avatar_num_edit .num_edit {
+    padding-left: 10%;
+    width: 100%;
+    flex: 7;
+    margin-right: 3%;
+  
+}
+
+
+.avatar_num_edit .num_edit .num {
+    width: 100%;
+    display: flex;
+    /* border: 1px grey solid; */
+    margin: 5%;
+    border-radius: 10px;
+}
+
+.avatar_num_edit .num_edit .num .fb {
+    font-size: 75%;
+    text-align: center;
+
+    width: 100%;
+    border-right: gray 1px solid;
+}
+
+.avatar_num_edit .num_edit .num .hz {
+    font-size: 75%;
+    text-align: center;
+
+    width: 100%;
+}
+
+.avatar_num_edit .num_edit .edit button {
+    font-size: 50%;
+    width: 100%;
+    height: 50%;
+}
+
+.avatar_num_edit .num_edit .edit {
+    padding-top: 5%;
+    width: 100%;
+}
+
+.memtab {
+    border-top: grey solid 1px;
+    border-bottom: grey solid 1px;
+    text-align: center;
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.memtab .mymem {
+    width: 100%;
+
+}
+
+.memtab .mylove {
+    width: 100%;
+
+}
+
+.tab-item.active {
+    width: 100%;
+    color: #000;
+    text-decoration: underline;
+}
+
+.tab-item {
+    color: grey;
+    width: 100%;
+}
+
+.memlist {
+    width: 100%;
+}
+
+.memlist .list {
+    width: 100%;
+    position: fixed;
+    height: 800rpx;
+}
+
+.memlist .listitem {
+    display: flex;
+    padding: 2%;
+    /* border: 1px solid; */
+    border-radius: 20px;
+    margin-top: 5%;
+}
+
+.memlist .listitem image {
+    flex: 3;
+    border-radius: 20px;
+    height: 50px;
+}
+
+.memlist .listitem .cotent {
+    flex: 7;
+    font-size: 75%;
+    padding-left: 5%;
+    border-bottom: solid 1px rgb(167, 167, 167);
+}
+
+.memlist .listitem .cotent .etc {
+    color: grey;
+    font-size: 9px;
+    display: flex;
+    width: 100%;
+}
+.memlist .listitem .cotent .etc .love{
+    width: 20%;
+}
+.memlist .listitem .cotent .etc .com{
+    margin-left: 5%;
+    width: 20%;
+}
+.memlist .listitem .cotent .etc .date{
+    margin-left: 5%;
+    width: 100%;
+}
+.memlist .listitem .cotent .etc .del{
+    width: 10%;
+    text-align: right;
+}
+.memlist .listitem .cotent .cotent_text {
+    padding-top: 10%;
+    width: 500rpx;
+
+    /*超出部分隐藏*/
+  
+    overflow:hidden;
+  
+    /*不换行*/
+  
+    white-space:nowrap;
+  
+    /*添加...*/
+  
+    text-overflow:ellipsis;
+}
+.filter {
+    width: 100%;
+    text-align: right;
+    padding-right: 5%;
+    font-size: 90%;
+    color: gray;
+}
+.iconfont {
+    font-size: 14px;
+}

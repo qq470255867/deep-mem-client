@@ -1,0 +1,47 @@
+<!--pages/editUser/editUser.wxml-->
+<view class="container">
+    <view class="avatar">
+        <view class="avatar_text">头像</view>
+        <view class="avatar_img">
+            <image mode="widthFix" src="{{user.avatar}}"></image>
+        </view>
+
+    </view>
+    <view class="name">
+        <view class="name_text">昵称</view>
+        <view class="name_value">
+            {{user.name}}
+        </view>
+    </view>
+    <view class="sex">
+        <view class="sex_text">性别</view>
+        <view class="sex_value">
+            <picker mode="selector" value="{{user.sex}}" range="{{sexs}}"  bindchange="bindsexChange">
+            {{user.sex}}
+            <text class='iconfont icon-xiangyou1'></text>
+            </picker>
+
+    </view>
+    
+    </view>
+     <view class="introduce">
+        <view class="introduce_text">简介</view>
+        <view class="introduce_value">
+          <input maxlength="20" bindinput="inputchange" value="{{user.introduce}}"/>
+        </view>
+    </view>
+
+    <view class="depth">
+        <view class="depth_text">公开的记忆</view>
+        <view class="depth_value">
+        <picker mode="selector" value="{{user.limitDepth}}" range="{{depths}}"  bindchange="bindDepthChange">
+            {{user.limitDepth}} m及以上
+          <text class='iconfont icon-xiangyou1'></text>      
+        </picker>
+        </view>
+    </view>
+
+    <view class="e_button">
+    <button bindtap="bindEdit" type="primary" size="mini"><text>修改</text></button>
+    </view>
+</view>

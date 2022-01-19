@@ -1,0 +1,70 @@
+/* pages/mem/mem.wxss */.card {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 4px 1px 1px #cccccc;
+  /* margin: 8px; */
+  margin-top: -20%;
+  /* position: relative; */
+  width: 80%;
+  /* width: 100%; */
+
+}
+.card  .card_img {
+  height: auto;
+}
+.card  .card_img image{
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.time{
+  margin-top: 2%;
+  width: 80%;
+  text-align: right;
+  color: gray;
+  font-size: 12px;
+  box-shadow: 4px 1px 1px #cccccc;
+  border-radius: 5px;
+}
+
+.author_info {
+  margin-top: 5%;
+  display: flex;
+  /* border: 1px solid grey; */
+  width: 80%;
+  box-shadow: 4px 1px 1px #cccccc;
+  border-radius: 5px;
+}
+.author_info .avatar  {
+  flex: 3;
+  width: 100%;
+  margin-left: 10%;
+  /* border: 1px solid grey; */
+}
+.author_info .avatar image {
+  border-radius: 100%;
+  display: block;
+  height: 50%;
+  width: 50%;
+}
+.author_info .name  {
+  flex: 5;
+  width: 100%;
+  /* border: 1px solid grey; */
+  text-align: center;
+  vertical-align: middle;
+  
+}
+.author_info .introduce {
+  /* border: 1px solid grey; */
+  font-size: 80%;
+  color: grey;
+  margin-top: 5%;
+}
+.author_info .loved_num {
+  /* border: 1px solid grey; */
+  font-size: 50%;
+  color: grey;
+}

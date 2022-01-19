@@ -1,0 +1,17 @@
+<!--pages/feedbak/feedback.wxml-->
+<view class="container">
+    <view class="t1">遇到奇怪的bug请右上角重新进入小程序</view>
+    <view class="">或者点击下面尝试联系客服</view>
+
+    <view class="but"><button open-type="contact" bindcontact="handleContact">联系我们</button>   </view>
+
+    <view class="t2">有什么好的意见和想法可邮件 </view>
+
+    <view class="t3" selectable='true'>470255867@qq.com</view>
+
+    <view class="t4">或者直接加我微信</view>
+
+    <view class="2wm"><image style="width: 200px" bindtap="viewimg" mode="widthFix" src="https://www.icycraft.cn/pic/2wm.jpg"> </image></view>
+    <view>上传视频、关注、动态、搜索、私信……在做了</view>
+    <view>学业繁忙，告辞</view>
+</view>

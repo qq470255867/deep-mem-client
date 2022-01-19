@@ -1,0 +1,38 @@
+<page>
+    <view class="container">
+        <view class="inp_view">
+            <view class="ico"><text class="iconfont icon-chaxun"></text></view>
+            <view class="inp"><input model:value="{{searchContent}}" placeholder="找找看！" bindconfirm="search"
+                    confirm-type="search" type="text" /></view>
+            <view class="ico_c"><text bindtap="clearContent" hidden="{{searchContent==''? true : false}}"
+                    class="iconfont icon-cuowu"></text></view>
+
+        </view>
+
+        <scroll-view class="s_list" scroll-y="true" bindscrolltolower="appendmemList">
+            <view wx:for="{{mems}}" wx:for-index="idx" wx:for-item="mymem" wx:key="id">
+                <view class="listitem" data-id="{{mymem.id}}" bindtap="turnTodetail">
+                    <image data-id="{{mymem.id}}"  bindtap="memdetail" mode='aspectFill' src="{{mymem.resource}}">
+                    </image>
+                    <view class="content_detail">
+                        <view class="detail">
+                            <view class="love">
+                                <text class="iconfont icon-aixin"></text>{{mymem.lovedNum}}
+                            </view>
+                            <view class="com">
+                                <text class="iconfont icon-xiaoxizhongxin"></text>{{mymem.commentNum}}
+                            </view>
+                            <view class="date">
+                                <text class="iconfont icon-rili"></text>{{mymem.memDate}}
+                            </view>
+                        </view>
+                        <view bindtap="memdetail" data-id="{{mymem.id}}" class='cotent_text'>
+                            <rich-text nodes="{{mymem.content}}"></rich-text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+
+    </view>
+</page>

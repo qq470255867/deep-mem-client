@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="card" animation="{{slide_up1}}">
+    <view bindtap="onItemClick">
+      <view class="card_img">
+        <image src="{{memory.resource}}" />
+      </view>
+      <view class="title" decode="{{true}}"> <text style="font-family: 'Courier New', Courier, monospace;"
+          decode="{{true}}"> &nbsp; &nbsp;{{memory.content}}</text> </view>
+    </view>
+  </view>
+
+  <view class="time_location" animation="{{slide_up1}}">
+    <view><text style="font-size: 100%;" class='iconfont icon-rili'></text> {{memory.memDate}}</view>
+    <view><text hidden="{{memory.location==''}}" style="font-size: 100%;" class='iconfont icon-didian1'></text>
+      {{memory.location}}</view>
+  </view>
+  <view class="loved_message" animation="{{slide_up1}}">
+    <view class="loved"> <text bindtap="lovedopt"
+        class="{{isloved?'iconfont icon-aixin_shixin':'iconfont icon-aixin'}}"></text><view>{{lovedNumFromMem}}</view></view>
+    <view class="message"> <text class='iconfont icon-xiaoxizhongxin'></text><view>{{memory.commentNum}}</view></view>
+  </view>
+
+  <view class="author_info" animation="{{slide_up1}}">
+    <view class="avatar">
+      <image mode="widthFix" src="{{user.avatar}}"></image>
+    </view>
+    <view class="name">
+      <text> {{user.name}}</text>
+      <view class="loved_num">{{lovedNum}}次获赞</view>
+      <view class="introduce">
+        <text> {{user.introduce}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<tabbar tabbar="{{tabbar}}"></tabbar>

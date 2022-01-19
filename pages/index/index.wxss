@@ -1,0 +1,411 @@
+@import '../../lib/iconfont/iconfont.wxss';
+
+page{
+  /* background-color: rgb(244, 244, 245); */
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: linear-gradient(to right, rgb(185, 183, 183) ,rgb(194, 189, 189), white);
+}
+@font-face {
+  font-family: 'FZSuXSLSJW';
+  src: url("https://we7.stuyun.com/FZSuXSLSJW.ttf")
+}
+
+.card {
+  background-image: linear-gradient(to right, rgb(185, 183, 183) ,rgb(194, 189, 189), white);
+  /* border: 2px solid rgb(244, 244, 245); */
+  border-radius: 5px;
+  background-color: rgb(244, 244, 245);
+  box-shadow: 4px 1px 1px #cccccc;
+  /* margin: 8px; */
+  margin-top: 2%;
+  /* position: relative; */
+  width: 80%;
+  /* width: 100%; */
+  
+
+}
+
+.card .card_img {
+  border-radius: 5px;
+  height: auto;
+}
+
+.card .card_img image {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+/* .container {
+  position: relative;
+  height: 100vh;
+
+} */
+.m_content{
+  background-image: linear-gradient(to right, rgb(185, 183, 183) ,rgb(194, 189, 189), white);
+  padding: 3%;
+  border-radius: 5px;
+}
+
+
+.detail_location {
+  background-image: linear-gradient(to right, rgb(185, 183, 183) ,rgb(194, 189, 189), white);
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 2%;
+  width: 80%;
+  text-align: right;
+  color: gray;
+  font-size: 12px;
+  box-shadow: 4px 1px 1px #cccccc;
+  border-radius: 5px;
+}
+
+.detail_location .loc {
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: left;
+}
+
+.detail_location .date_detph {
+  display: flex;
+  width: 100%;
+}
+
+.detail_location .date_detph .date {
+  width: 100%;
+  text-align: left;
+}
+
+.detail_location .date_detph .depth {
+  width: 100%;
+  text-align: right;
+}
+
+.author_info {
+  background-image: linear-gradient(to right, rgb(185, 183, 183) ,rgb(194, 189, 189), white);
+  display: flex;
+  /* border: 1px solid grey; */
+  width: 80%;
+  box-shadow: 4px 1px 1px #cccccc;
+  border-radius: 5px;
+}
+
+.author_info .avatar {
+  flex: 3;
+  width: 100%;
+  margin-left: 10%;
+  /* border: 1px solid grey; */
+}
+
+.author_info .avatar image {
+  border-radius: 100%;
+  display: block;
+  height: 50%;
+  width: 50%;
+}
+
+.author_info .name_loved_intro {
+  flex: 5;
+  width: 100%;
+  /* border: 1px solid grey; */
+  text-align: center;
+  vertical-align: middle;
+
+}
+.author_info .name_loved_intro .name_lv {
+  display: flex;
+  width: 100%;
+}
+
+.author_info .name_loved_intro .name_lv  .name{
+  text-align: left;
+  width: 80%;
+}
+
+.author_info .name_loved_intro .name_lv  .lv{
+  padding-right: 5%;
+  width: 20%;
+}
+
+.author_info .name_loved_intro .name_lv  .lv .iconfont {
+
+  font-size: 25px;
+}
+
+.author_info .introduce {
+  /* border: 1px solid grey; */
+  font-size: 80%;
+  color: grey;
+  margin-top: 5%;
+}
+
+.author_info .loved_num {
+  /* border: 1px solid grey; */
+  font-size: 50%;
+  color: grey;
+}
+
+.loved_message {
+  width: 80%;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+}
+
+.loved_message .loved {
+  width: 33%;
+
+}
+.loved_message .message {
+  width: 33%;
+
+}
+
+
+.loved_message .shareHY {
+  width: 33%;
+
+}
+
+.fakebutton{
+  background: none !important;
+  border:none !important;
+  width: 100px !important;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.loved_message .music image{
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+}
+
+.loved_message .loved {
+  color: red;
+}
+
+
+.loved_message text {
+  font-size: 200%;
+}
+
+/* 模态框 */
+.arrow {
+  display: inline-block;
+  border: 6px solid transparent;
+  border-top-color: #000;
+  margin-left: 8px;
+  position: relative;
+  top: 6rpx;
+}
+
+/* ---------------------------- */
+/*模态框*/
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.modal-cancel {
+  position: absolute;
+  z-index: 2000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bottom-dialog-body {
+  width: 100%;
+  position: absolute;
+  z-index: 3000;
+  bottom: 0;
+  left: 0;
+}
+
+/*动画前初始位置*/
+.bottom-positon {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+
+/* 底部弹出框 */
+.bottom-positon {
+  text-align: center;
+}
+
+.Mselect {
+  margin-bottom: 20rpx;
+}
+
+.Mselect view {
+  padding: 26rpx 0;
+  background: #fff;
+}
+
+.Mselect view:not(:last-of-type) {
+  border-bottom: 1px solid #dfdede;
+}
+
+.Mcancel {
+  background: #fff;
+  padding: 26rpx 0;
+}
+
+/* .pretext {
+  height: 3vh;
+  bottom: 0;
+  color: rgb(48, 164, 231);
+  text-decoration: underline;
+  font-size: 60%;
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 2%;
+} */
+
+.commentItem {
+  margin: 5%;
+  display: flex;
+  /* border: solid 1px; */
+  padding: 3%;
+  background-image: linear-gradient(to right, rgb(185, 183, 183) ,rgb(194, 189, 189), white);
+
+  border-radius: 10px;
+}
+
+
+.commentItem .avatar {
+  width: 20%;
+}
+
+.commentItem .name_con {
+  margin-left: 10%;
+  width: 80%;
+
+}
+
+.commentItem .name_con .name_lv .iconfont{
+  font-size: 20px;
+}
+
+.commentItem .name_con .name_lv .lv{
+  
+}
+
+.com_close{
+  color: #fff;
+  text-align: right;
+  padding-right: 5%;  
+}
+
+.commentItem .name_con .name_lv .name{
+
+  text-align: left; 
+  font-size: 12px;
+}
+
+.commentItem .name_con .name_lv .date{
+  width: 60%;
+  text-align: right; 
+  font-size: 12px;
+}
+
+
+.commentItem .name_con .name_lv {
+  padding-bottom: 5% ;
+  height: 12px;
+  display: flex;
+}
+
+.cominp {
+  width: 100%;
+  display: flex; 
+  border-radius: 10px; 
+  background-color: rgb(244, 244, 245);
+  text-align: left; 
+  padding: 5%;
+}
+.cominp .inp {
+  width: 80%;
+}
+.cominp .but {
+  width: 20%;
+  padding: 1%;
+}
+
+
+
+.commentItem .avatar image{
+  border-radius: 10px;
+  width: 40px;
+  background-color: rgb(244, 244, 245);
+}
+
+.animationSlow {
+  margin-top: -1555px;
+  margin-left: -1555px;
+  width: 7777rpx;
+  height: 7777rpx;
+  background-color: rgba(0, 0, 0, 0.397);
+  animation-name: myfirst; 
+  animation-duration: 2000s; 
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+  -webkit-animation-name: myfirst;
+  -webkit-animation-duration: 10000ms;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  position: fixed;
+  z-index: -1;
+}
+
+@keyframes myfirst {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@-webkit-keyframes myfirst {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.t {
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+ font-weight: 800;
+}
+

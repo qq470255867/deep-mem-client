@@ -1,0 +1,18 @@
+/* pages/pretext/pretext.wxss */
+.page{
+    padding: 0;
+    height: 100%;
+}
+.container {
+    padding: 0;
+    position: relative;
+    color: rgb(206, 204, 204);
+    /* height: 100vh; */
+    /* background-image: url('https://img.tukuppt.com/bg_grid/00/04/40/oSSl02DOTy.jpg!/fh/350'); */
+}
+.container .bgi {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: -1;
+}

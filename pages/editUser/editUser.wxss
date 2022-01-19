@@ -1,0 +1,117 @@
+/* pages/editUser/editUser.wxss */
+@import '../../lib/iconfont/iconfont.wxss';
+.container {
+    height: 100%;
+    padding: 0;
+    margin-top: 10%;
+}
+
+.avatar {
+    margin-top: 3%;
+    border-radius: 10px;
+    display: flex;
+    border-bottom: black solid 1px;
+    width: 100%;
+}
+
+.avatar .avatar_img {
+    width: 100%;
+    text-align: right;
+    padding-right: 5%;
+}
+
+.avatar .avatar_text {
+    width: 100%;
+    text-align: left;
+    padding: 5%;
+    vertical-align: center;
+}
+
+.avatar .avatar_img image {
+    width: 50px;
+    border-radius: 100px;
+}
+
+.name {
+    margin-top: 3%;
+    border-radius: 10px;
+    display: flex;
+    border-bottom: black solid 1px;
+    width: 100%;
+}
+
+.name .name_text {
+    width: 100%;
+    text-align: left;
+    padding: 5%;
+}
+
+.name .name_value {
+    width: 100%;
+    text-align: right;
+    padding: 5%;
+    vertical-align: center;
+}
+
+.sex .sex_text {
+    width: 100%;
+    text-align: left;
+    padding: 5%;
+}
+.sex {
+    margin-top: 3%;
+    border-radius: 10px;
+    display: flex;
+    border-bottom: black solid 1px;
+    width: 100%;
+}
+.sex .sex_value {
+    width: 100%;
+    text-align: right;
+    padding: 5%;
+    vertical-align: center;
+}
+
+.introduce .introduce_text {
+    width: 100%;
+    text-align: left;
+    padding: 5%;
+}
+.introduce {
+    margin-top: 3%;
+    border-radius: 10px;
+    display: flex;
+    border-bottom: black solid 1px;
+    width: 100%;
+}
+.introduce .introduce_value {
+    width: 100%;
+    text-align: right;
+    padding: 5%;
+    vertical-align: center;
+}
+
+.depth .depth_text {
+    width: 100%;
+    text-align: left;
+    padding: 5%;
+}
+.depth {
+    margin-top: 3%;
+    border-radius: 10px;
+    display: flex;
+    border-bottom: black solid 1px;
+    width: 100%;
+}
+.depth .depth_value {
+    width: 100%;
+    text-align: right;
+    padding: 5%;
+    vertical-align: center;
+}
+.e_button {
+    width: 100%;
+    margin-top: 10%;
+    font-size: 80%;
+    text-align: center;
+}

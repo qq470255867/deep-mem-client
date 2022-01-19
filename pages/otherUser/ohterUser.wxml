@@ -1,0 +1,108 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+    <image class="header" src="http://110.42.191.22/pic/header.jpg"></image>
+    <view class="avatar_num_edit">
+        <view style="text-align: center;" class="avatar">
+            <image mode="widthFix" src="{{user.avatar}}"></image>
+            <view class="name_lv">
+                <view class="name"> <text>{{user.name}}</text> </view>
+                <view style="color: {{levelColor}};" class="lv"><text
+                        class="iconfont icon-icon-lv{{user.level}}"></text></view>
+            </view>
+        </view>
+        <view class="num_edit">
+            <view class="num">
+                <view class="fb">
+                    <view>{{count}}</view>
+                    <view>发表</view>
+                </view>
+                <view class="hz">
+                    <view>{{user.lovedNum}}</view>
+                    <view>获赞</view>
+                </view>
+            </view>
+            <view style="text-align: center; padding-top: 10%; font-size: 13px; color: gray;">他只展示了{{user.limitDepth}}m以上的记忆</view>
+        </view>
+    </view>
+    <view class="memtab">
+        <view class="mymem" class="tab-item {{item==0?'active':''}}" bindtap="changetab" data-item="0">
+            发布
+        </view>
+        <view class="mylove" class="tab-item {{item==1?'active':''}}" bindtap="changetab" data-item="1">
+            喜欢
+        </view>
+    </view>
+    <view class="filter">
+        <picker mode="selector" bindchange="bindDepthChange" value="{{depth}}" range="{{depths}}">
+            <text hidden="{{item==1}}" class='iconfont icon-xiangqing'> {{depth==10?'全部的记忆':'在'+depth+'m的记忆'}}</text>
+            <text style="color: rgb(244, 244, 245);">宇</text>
+        </picker>
+
+    </view>
+    <view class="memlist">
+        <swiper class="list" current="{{item}}" bindchange="changeTab">
+            <swiper-item>
+                <scroll-view scroll-y="true" style="    background-color: rgb(244, 244, 245);height:55vh "
+                    bindscrolltolower="appendmemList">
+                    <view wx:for="{{memList}}" wx:for-index="idx" wx:for-item="mymem" wx:key="id">
+                        <view class="listitem">
+                            <image data-id="{{mymem.id}}" bindtap="memdetail" mode='aspectFill'
+                                src="{{mymem.resource}}"></image>
+                            <view class="cotent">
+                                <view class="etc">
+                                    <view class="love">
+                                        <text style="text-align: right;"
+                                            class="iconfont icon-aixin"></text>{{mymem.lovedNum}}
+                                    </view>
+                                    <view class="com">
+                                        <text style="text-align: right;"
+                                            class="iconfont icon-xiaoxizhongxin"></text>{{mymem.commentNum}}
+                                    </view>
+                                    <view class="date">
+                                        <text style="text-align: right;"
+                                            class="iconfont icon-rili"></text>{{mymem.memDate}}
+                                    </view>
+                                </view>
+                                <view bindtap="memdetail" data-id="{{mymem.id}}" class='cotent_text'>{{mymem.content}}
+                                </view>
+
+                            </view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+            <!-- 喜欢 -->
+            <swiper-item>
+                <scroll-view scroll-y="true" style="background-color: rgb(244, 244, 245);height:55vh "
+                    bindscrolltolower="appendLovedmemList">
+                    <view wx:for="{{lovedMemList}}" wx:for-item="lovedmem" wx:key="id">
+                        <view class="listitem" data-id="{{lovedmem.id}}" bindtap="memdetail">
+                            <image mode='aspectFill' src="{{lovedmem.resource}}"></image>
+
+                            <view class="cotent">
+                                <view class="etc">
+                                    <view class="love">
+                                        <text style="text-align: right;"
+                                            class="iconfont icon-aixin"></text>{{lovedmem.lovedNum}}
+                                    </view>
+                                    <view class="com">
+                                        <text style="text-align: right;"
+                                            class="iconfont icon-xiaoxizhongxin"></text>{{lovedmem.commentNum}}
+                                    </view>
+                                    <view class="date">
+                                        <text style="text-align: right;"
+                                            class="iconfont icon-rili"></text>{{lovedmem.memDate}}
+                                    </view>
+                                
+                                </view>
+                                <view bindtap="memdetail" data-id="{{lovedmem.id}}" class='cotent_text'>{{lovedmem.content}}
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+
+</view>

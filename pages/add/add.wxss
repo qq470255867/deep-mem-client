@@ -1,0 +1,19 @@
+/* pages/add/add.wxss */
+page {
+}
+.container {
+    height: 97vh;
+    background-color: rgb(244, 244, 245);
+    padding: 0;
+}
+.pretext {
+    height: 3vh;
+    bottom: 0;
+    color: rgb(48, 164, 231);
+    text-decoration: underline;
+    font-size: 60%;
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(244, 244, 245);
+  }

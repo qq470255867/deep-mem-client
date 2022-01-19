@@ -1,0 +1,10 @@
+<!--pages/add/add.wxml-->
+<page>
+    <view class="container">
+        <wxpost id="wxpost" bind:postlistener="postlistener"></wxpost>
+    </view>
+    <view hidden="{{hidpretext}}" class="pretext" animation="{{slide_up1}}">
+        <view style="width: 50%; text-align: center;padding-left: 25%;"><text bindtap="turnpretext">前言</text></view>
+        <view style="width: 50%; text-align: center; padding-right: 25%;"><text bindtap="turnfeedback">反馈</text></view>
+    </view>
+</page>

@@ -1,0 +1,95 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="card" animation="{{slide_up1}}">
+    <view bindtap="onItemClick">
+      <view class="card_img">
+        <image mode="aspectFill" src="{{m_memory.resource}}" bindtap="viewimgdetail" />
+      </view>
+      <view class="m_content" decode="{{true}}"> <text style="font-family: 'Courier New', Courier, monospace;"
+          decode="{{true}}">{{m_memory.content}}</text> </view>
+    </view>
+  </view>
+
+  <view class="detail_location" animation="{{slide_up1}}">
+
+    <view class="loc"><text hidden="{{m_memory.location==''}}" style="font-size: 100%;"
+        class='iconfont icon-didian1'></text>
+      {{m_memory.location}} </view>
+    <view class="date_detph">
+      <view class="date" style="padding-left:5%;padding-right: 5%;"><text style="font-size: 100%;"
+          class='iconfont icon-rili'></text>
+        {{m_memory.memDate}} </view>
+      <view class="depth" style="padding-left:5%;padding-right: 5%;"><text style="font-size: 100%;"
+          class='iconfont icon-a-ziyuan15'></text> {{m_memory.depth}}m </view>
+    </view>
+  </view>
+  <view class="loved_message" animation="{{slide_up1}}">
+    <view class="loved"> <text bindtap="lovedopt"
+        class="{{isloved?'iconfont icon-aixin_shixin':'iconfont icon-aixin'}}"></text>
+      <view>{{lovedNumFromMem}}</view>
+    </view>
+    <view class="shareHY"><button open-type="share" class="fakebutton">
+        <text style="padding-top: 0;" class='iconfont icon-fenxiang2'></text>
+      </button>
+    </view>
+    <view class="message" bindtap="showModal"> <text class='iconfont icon-xiaoxizhongxin'></text>
+      <view>{{commemtNum}}</view>
+    </view>
+  </view>
+
+  <view class="author_info" animation="{{slide_up1}}">
+    <view class="avatar">
+      <image mode="widthFix" src="{{userFromMem.avatar}}"></image>
+    </view>
+    <view class="name_loved_intro">
+      <view class="name_lv">
+        <view class="name"> <text> {{userFromMem.name}}</text></view>
+        <view class="lv" style="color:{{levelColor}};"> <text class="iconfont icon-icon-lv{{userFromMem.level}}"></text>
+        </view>
+      </view>
+      <view class="loved_num">{{lovedNum}}次获赞</view>
+      <view class="introduce">
+        <text> {{userFromMem.introduce}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="comment_info"></view>
+  <!-- modal -->
+  <view class="modal modal-bottom-dialog" hidden="{{hideFlag}}">
+    <view class="modal-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+
+      <!-- <view style="text-align: right; padding-right: 10%; font-size: 50%; border: solid black 1px; border-radius: 10px;"
+        class='Mcancel' bindtap='mCancel'>
+        <text>取消</text>
+      </view> -->
+      <view class="com_close"><text class="iconfont icon-shanchu2" bindtap='mCancel'></text></view>
+      <scroll-view bindscrolltolower="appendComment" scroll-y="true" style="height: 400rpx;">
+        <view wx:for="{{comments}}" wx:for-item="com" wx:key="id">
+          <view class="commentItem" data-id="{{com.id}}">
+            <view class="avatar">
+              <image mode="widthFix" src="{{com.avatar}}"></image>
+            </view>
+            <view class="name_con">
+              <view class="name_lv">
+                <view class="name"><text>{{com.name}}</text></view>
+                <view class="lv"><text style="color: {{com.levelColor}};"
+                    class="iconfont icon-icon-lv{{com.level}}"></text></view>
+              </view>
+              <view
+                style="word-wrap: break-word; word-break: normal; width: 100%; text-align: left; font-size: 60%; color: grey;">
+                <text>{{com.content}}</text>
+              </view>
+              <!-- <view style="width: 100%; text-align: right; font-size: 60%; color: rgb(136, 134, 134);">{{com.createDate}}</view> -->
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      <view class="cominp">
+        <view class="inp"> <input model:value="{{commentContent}}" auto-focus placeholder="评论...." /></view>
+        <view class="but"> <button bindtap="addComment" style="font-size: 80%; margin-right: 5%;" type="primary"
+            size="mini">发送</button></view>
+      </view>
+    </view>
+  </view>
+</view>

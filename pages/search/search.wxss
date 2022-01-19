@@ -1,0 +1,101 @@
+@import '../../lib/iconfont/iconfont.wxss';
+
+/* @import '../wxParse/wxParse.wxss'; */
+page {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, white, rgb(194, 189, 189), rgb(185, 183, 183));
+}
+
+.container {
+    /* margin-top: 10%; */
+    height: 100%;
+    padding: 0;
+}
+
+.inp_view {
+    margin-top: 5%;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    height: 4%;
+
+    background-color: rgb(228, 226, 226);
+}
+
+.inp_view .ico {
+    margin-left: 2%;
+    width: 5%;
+}
+
+.inp_view .ico_c {
+    margin-right: 2%;
+    width: 5%;
+}
+
+.inp_view .inp {
+    padding-top: 1px;
+    font-size: 80%;
+    margin-left: 2%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+.s_list {
+    margin-top: 10%;
+    width: 90%;
+    height: 90%;
+}
+
+
+.s_list .listitem {
+    display: flex;
+    padding-top: 5%;
+}
+
+.s_list .listitem image {
+    flex: 3;
+    border-radius: 20px;
+    height: 60px;
+}
+
+.s_list .listitem .content_detail {
+    flex: 7;
+    font-size: 80%;
+    border-bottom: solid 1px rgb(167, 167, 167);
+}
+
+.s_list .listitem .content_detail .detail {
+    font-size: 11px;
+
+    color: gray;
+   margin-left: 10%;
+    display: flex;
+}
+
+.s_list .listitem .content_detail .detail .love {
+    width: 20%;
+}
+
+.s_list .listitem .content_detail .detail .com {
+    width: 20%;
+}
+
+.s_list .listitem .content_detail .detail .date {
+    width: 80%;
+    text-align: right;
+    padding-right: 5%;
+}
+
+.s_list .listitem .content_detail .cotent_text {
+    padding-top: 5%;
+    margin-left: 5%;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 这里是超出几行省略 */
+    overflow: hidden;
+    /* border-bottom: solid 1px rgb(167, 167, 167); */
+
+}

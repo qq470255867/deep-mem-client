@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="card">
+    <view bindtap="onItemClick">
+      <view class="card_img">
+        <image src="{{memory.resource}}" />
+      </view>
+      <view class="title" decode="{{true}}"> <text decode="{{true}}"> &nbsp; &nbsp;{{memory.content}}</text> </view>
+    </view>
+  </view>
+  <view class="time">{{memory.memDate}}
+  </view>
+  <view class="author_info">
+    <view class="avatar">
+      <image mode="widthFix" src="{{user.avatar}}"></image>
+    </view>
+    <view class="name">
+      <text> {{user.name}}</text>
+      <view class="loved_num">{{user.lovedNum}}次获赞</view>
+      <view class="introduce">
+        <text> {{user.introduce}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<tabbar tabbar="{{tabbar}}"></tabbar>
